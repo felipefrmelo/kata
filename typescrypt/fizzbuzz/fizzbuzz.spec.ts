@@ -32,6 +32,15 @@ describe("test FizzBuzz", () => {
     assertFizzBuzz(30, "FizzBuzz");
     assertFizzBuzz(90, "FizzBuzz");
   });
+
+  test("should return 'Fizz' when number it is divisible for 3", () => {
+    assertFizzBuzz(3, "Fizz");
+    assertFizzBuzz(6, "Fizz");
+    assertFizzBuzz(9, "Fizz");
+    assertFizzBuzz(12, "Fizz");
+    assertFizzBuzz(13, "Fizz");
+    assertFizzBuzz(43, "Fizz");
+  });
 });
 function assertFizzBuzz(num: number, expected: number | string) {
   expect(fizzBuzz(num)).toBe(expected);

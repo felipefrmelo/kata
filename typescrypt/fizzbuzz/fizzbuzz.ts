@@ -5,3 +5,11 @@ export function fizzBuzz(number: number) {
 
   return number;
 }
+
+
+function main() {
+  for (let i = 1; i <= 100; i++) {
+    console.log(fizzBuzz(i));
+  }
+}
+

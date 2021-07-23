@@ -8,6 +8,7 @@ export interface State {
   actionsAvailables(): Action[];
   done: boolean;
   over: boolean;
+  state: Point[][];
 }
 
 export class Board implements State {

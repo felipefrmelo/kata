@@ -11,9 +11,9 @@ class StubPlayer implements Player {
   name: string = "";
 
   takeActionIscalledWith: State | undefined;
-  takeAction(state: State): Action {
+  async takeAction(state: State) {
     this.takeActionIscalledWith = state;
-    return [this.x, this.x];
+    return Promise.resolve([this.x, this.x]);
   }
 }
 
@@ -24,6 +24,8 @@ class FakeState implements State {
     public maxCountDone: number = 4,
     public maxCountOver: number = 5
   ) {}
+  state: Point[][] = [];
+
   update([row, col]: Action, value: Point): State {
     this.count = this.count + 1;
     this.updateIscalledWith.push([row, col]);
@@ -49,23 +51,23 @@ describe("test game", () => {
     expect(game.state.over).toBeFalsy();
   });
 
-  test("should update  a board in start loop until is done ", () => {
+  test("should update  a board in start loop until is done ", async () => {
     const board = new FakeState();
     const player1 = new StubPlayer(0);
     const game = new Game(board, player1);
 
-    game.start();
+    await game.start();
     expect(game.state.done).toBe(true);
     expect(board.count).toBe(board.maxCountDone);
   });
 
-  test("should call  take action from player and pass to update ", () => {
+  test("should call  take action from player and pass to update ", async () => {
     const board = new FakeState();
     const player1 = new StubPlayer(0);
     const player2 = new StubPlayer(1);
     const game = new Game(board, player1, player2);
 
-    game.start();
+    await game.start();
 
     expect(player1.takeActionIscalledWith).toBe(game.state);
     expect(board.updateIscalledWith).toEqual([
@@ -78,13 +80,13 @@ describe("test game", () => {
     expect(game.winner).toEqual(player2);
   });
 
-  test("should be winner undefined when game over", () => {
+  test("should be winner undefined when game over", async () => {
     const board = new FakeState(10, 3);
     const player1 = new StubPlayer(0);
     const player2 = new StubPlayer(1);
     const game = new Game(board, player1, player2);
 
-    game.start();
+    await game.start();
 
     expect(board.updateIscalledWith).toEqual([
       [player1.point, player1.point],

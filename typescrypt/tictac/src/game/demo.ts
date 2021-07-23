@@ -3,7 +3,7 @@ import { Player } from "./player";
 import { Action, Board, Point, State } from "./state";
 
 class RamdonPlayer implements Player {
-  takeAction(state: State): Action {
+  async takeAction(state: State): Promise<Action> {
     const actionsAvailables = state.actionsAvailables();
     return actionsAvailables[
       Math.floor(Math.random() * actionsAvailables.length)
@@ -18,7 +18,7 @@ function main() {
   const game = new Game(
     board,
     new RamdonPlayer("x", "player1"),
-    new RamdonPlayer("o", "player2"),
+    new RamdonPlayer("o", "player2")
   );
 
   game.start();

@@ -119,3 +119,11 @@ pom.xml.asc
 .cpcache/
 .cpcache/
 
+typescrypt/tictac/build/jest.config.js
+typescrypt/tictac/build/src/demo.js
+typescrypt/tictac/build/src/game.js
+typescrypt/tictac/build/src/game.spec.js
+typescrypt/tictac/build/src/player.js
+typescrypt/tictac/build/src/state.js
+typescrypt/tictac/build/src/state.spec.js
+typescrypt/tictac/build/src/utils.js

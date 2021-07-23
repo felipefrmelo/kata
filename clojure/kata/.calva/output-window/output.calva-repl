@@ -1,0 +1,385 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+c o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Starting Jack-in Terminal: lein update-in :dependencies conj '[nrepl,"0.8.3"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.26.0"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless
+; Hooking up nREPL sessions...
+; Connected session: clj
+; TIPS: 
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉kata.core꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉kata.core꞉> 
+; Evaluating file: core_test.clj
+; Syntax error compiling at (src/kata/meeting/core_test.clj:1:1).
+; No namespace: kata.meeting.core
+; Evaluation of file core_test.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉kata.core꞉> 
+; Running tests for kata.meeting.core-test...
+; No tests found. 😱, ns: 0, vars: 0
+clj꞉kata.meeting.core-test꞉> 
+; Evaluating file: core.clj
+#'kata.meeting.core/meeting
+; Running tests for kata.meeting.core...
+; 1 tests finished, all passing 👍, ns: 1, vars: 1
+clj꞉kata.meeting.core꞉> 
+; Evaluating file: core.clj
+#'kata.meeting.core/meeting
+; Running tests for kata.meeting.core...
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:7):
+; should split a list of users
+; expected:
+(MELO, FELIPE)
+; actual:
+((MELO, sFELIPE))
+; 1 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 1
+clj꞉kata.meeting.core꞉> 
+; Evaluating file: core.clj
+#'kata.meeting.core/meeting
+; Running tests for kata.meeting.core...
+; 1 tests finished, all passing 👍, ns: 1, vars: 1
+clj꞉kata.meeting.core꞉> 
+; Evaluating file: core_test.clj
+#'kata.meeting.core-test/a-test
+; Running tests for kata.meeting.core-test...
+; 1 tests finished, all passing 👍, ns: 1, vars: 1
+clj꞉kata.meeting.core-test꞉> 
+; Evaluating file: core_test.clj
+#'kata.meeting.core-test/a-test
+; Running tests for kata.meeting.core-test...
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:7):
+; should split a list of users
+; expected:
+(MELO, FELIPE)
+; actual:
+((MELOS, FELIPE))
+; 1 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 1
+clj꞉kata.meeting.core-test꞉> 
+; Evaluating file: core_test.clj
+#'kata.meeting.core-test/a-test
+; Running tests for kata.meeting.core-test...
+; 1 tests finished, all passing 👍, ns: 1, vars: 1
+clj꞉kata.meeting.core-test꞉> 
+; Syntax error compiling at (src/kata/meeting/core_test.clj:1:7913).
+; Unable to resolve symbol: meetin in this context
+clj꞉kata.meeting.core-test꞉> 
+; Syntax error compiling at (src/kata/meeting/core_test.clj:1:7913).
+; Unable to resolve symbol: meetin in this context
+clj꞉kata.meeting.core-test꞉> 
+#function[kata.meeting.core/meeting]
+clj꞉kata.meeting.core-test꞉> 
+; Evaluating file: core_test.clj
+#'kata.meeting.core-test/a-test
+; Running tests for kata.meeting.core-test...
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:8):
+; should split a list of users
+; expected:
+(NETO, ABEL)(MELO, FELIPE)
+; actual:
+((MELO, NETO;FELIPE, ABEL))
+; 2 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 1
+clj꞉kata.meeting.core-test꞉> 
+; Evaluating file: core.clj
+#'kata.meeting.core/meeting
+; Running tests for kata.meeting.core...
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:8):
+; should split a list of users
+; expected:
+(NETO, ABEL)(MELO, FELIPE)
+; actual:
+((MELO, NETO;FELIPE, ABEL))
+; 2 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 1
+clj꞉kata.meeting.core꞉> 
+; Syntax error compiling at (src/kata/meeting/core.clj:1:7913).
+; No such var: str/apl
+clj꞉kata.meeting.core꞉> 
+; Syntax error compiling at (src/kata/meeting/core.clj:1:7913).
+; No such var: str/apl
+clj꞉kata.meeting.core꞉> 
+; Evaluating file: core.clj
+#'kata.meeting.core/meeting
+; Running tests for kata.meeting.core...
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:7):
+; should split a list of users
+; expected:
+(MELO, FELIPE)
+; actual:
+((MELO"], ["FELIPE))
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:8):
+; should split a list of users
+; expected:
+(NETO, ABEL)(MELO, FELIPE)
+; actual:
+((MELO"], NETO" "FELIPE, ["ABEL))
+; 2 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 1
+clj꞉kata.meeting.core꞉> 
+; Evaluating file: core.clj
+#'kata.meeting.core/meeting
+; Running tests for kata.meeting.core...
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:8):
+; should split a list of users
+; expected:
+(NETO, ABEL)(MELO, FELIPE)
+; actual:
+((MELO, NETO;FELIPE, ABEL))
+; 2 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 1
+clj꞉kata.meeting.core꞉> 
+()
+clj꞉kata.meeting.core꞉> 
+()
+clj꞉kata.meeting.core꞉> 
+; Evaluating file: core.clj
+#'kata.meeting.core/meeting
+; Running tests for kata.meeting.core...
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:7):
+; should split a list of users
+; expected:
+(MELO, FELIPE)
+; actual:
+(((MELO, FELIPE)))
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:8):
+; should split a list of users
+; expected:
+(NETO, ABEL)(MELO, FELIPE)
+; actual:
+(((NETO, ABEL) (MELO, FELIPE)))
+; 2 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 1
+clj꞉kata.meeting.core꞉> 
+; Evaluating file: core.clj
+#'kata.meeting.core/meeting
+; Running tests for kata.meeting.core...
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:7):
+; should split a list of users
+; expected:
+(MELO, FELIPE)
+; actual:
+((( M E L O ,   F E L I P E )))
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:8):
+; should split a list of users
+; expected:
+(NETO, ABEL)(MELO, FELIPE)
+; actual:
+((( N E T O ,   A B E L ) ( M E L O ,   F E L I P E )))
+; 2 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 1
+clj꞉kata.meeting.core꞉> 
+; Evaluating file: core.clj
+#'kata.meeting.core/meeting
+; Running tests for kata.meeting.core...
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:7):
+; should split a list of users
+; expected:
+(MELO, FELIPE)
+; actual:
+(((MELO, FELIPE)))
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:8):
+; should split a list of users
+; expected:
+(NETO, ABEL)(MELO, FELIPE)
+; actual:
+(((NETO, ABEL) (MELO, FELIPE)))
+; 2 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 1
+clj꞉kata.meeting.core꞉> 
+; Evaluating file: core.clj
+#'kata.meeting.core/meeting
+; Running tests for kata.meeting.core...
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:7):
+; should split a list of users
+; expected:
+(MELO, FELIPE)
+; actual:
+(((MELO, FELIPE)))
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:8):
+; should split a list of users
+; expected:
+(NETO, ABEL)(MELO, FELIPE)
+; actual:
+(((NETO, ABEL) (MELO, FELIPE)))
+; 2 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 1
+clj꞉kata.meeting.core꞉> 
+nil
+clj꞉kata.meeting.core꞉> 
+; Evaluating file: core.clj
+#'kata.meeting.core/meeting
+; Running tests for kata.meeting.core...
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:7):
+; should split a list of users
+; expected:
+(MELO, FELIPE)
+; actual:
+()
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:8):
+; should split a list of users
+; expected:
+(NETO, ABEL)(MELO, FELIPE)
+; actual:
+()
+; 2 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 1
+clj꞉kata.meeting.core꞉> 
+; Evaluating file: core.clj
+#'kata.meeting.core/meeting
+; Running tests for kata.meeting.core...
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:7):
+; should split a list of users
+; expected:
+(MELO, FELIPE)
+; actual:
+(((MELO, FELIPE)))
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:8):
+; should split a list of users
+; expected:
+(NETO, ABEL)(MELO, FELIPE)
+; actual:
+(((NETO, ABEL) (MELO, FELIPE)))
+; 2 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 1
+clj꞉kata.meeting.core꞉> 
+; Evaluating file: core.clj
+#'kata.meeting.core/meeting
+; Running tests for kata.meeting.core...
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:7):
+; should split a list of users
+; expected:
+(MELO, FELIPE)
+; actual:
+(,clojure.lang.LazySeq@1a6da720 )
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:8):
+; should split a list of users
+; expected:
+(NETO, ABEL)(MELO, FELIPE)
+; actual:
+(,clojure.lang.LazySeq@ac0b4d4f )
+; 2 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 1
+clj꞉kata.meeting.core꞉> 
+; Evaluating file: core.clj
+#'kata.meeting.core/meeting
+; Running tests for kata.meeting.core...
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:7):
+; should split a list of users
+; expected:
+(MELO, FELIPE)
+; actual:
+(,clojure.lang.LazySeq@1a6da720 )
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:8):
+; should split a list of users
+; expected:
+(NETO, ABEL)(MELO, FELIPE)
+; actual:
+(,clojure.lang.LazySeq@ac0b4d4f )
+; 2 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 1
+clj꞉kata.meeting.core꞉> 
+; Evaluating file: core.clj
+#'kata.meeting.core/meeting
+; Running tests for kata.meeting.core...
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:7):
+; should split a list of users
+; expected:
+(MELO, FELIPE)
+; actual:
+(,clojure.lang.LazySeq@1a6da720 )
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:8):
+; should split a list of users
+; expected:
+(NETO, ABEL)(MELO, FELIPE)
+; actual:
+(,clojure.lang.LazySeq@ac0b4d4f )
+; 2 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 1
+clj꞉kata.meeting.core꞉> 
+; Evaluating file: core.clj
+#'kata.meeting.core/meeting
+; Running tests for kata.meeting.core...
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:7):
+; should split a list of users
+; expected:
+(MELO, FELIPE)
+; actual:
+(((MELO, FELIPE)))
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:8):
+; should split a list of users
+; expected:
+(NETO, ABEL)(MELO, FELIPE)
+; actual:
+(((NETO, ABEL) (MELO, FELIPE)))
+; 2 tests finished, problems found. 😭 errors: 0, failures: 2, ns: 1, vars: 1
+clj꞉kata.meeting.core꞉> 
+; Evaluating file: core.clj
+#'kata.meeting.core/meeting
+; Running tests for kata.meeting.core...
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:8):
+; should split a list of users
+; expected:
+(NETO, ABEL)(MELO, FELIPE)
+; actual:
+((NETO, ABEL))
+; 2 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 1
+clj꞉kata.meeting.core꞉> 
+; Evaluating file: core.clj
+#'kata.meeting.core/meeting
+; Running tests for kata.meeting.core...
+; 2 tests finished, all passing 👍, ns: 1, vars: 1
+clj꞉kata.meeting.core꞉> 
+; Evaluating file: core_test.clj
+#'kata.meeting.core-test/a-test
+; Running tests for kata.meeting.core-test...
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:9):
+; should split a list of users
+; expected:
+(MELO, FELIPE)(TIAO, ZE)
+; actual:
+((TIAO, ZE)(MELO, FELIPE))
+; 3 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 1
+clj꞉kata.meeting.core-test꞉> 
+; Evaluating file: core.clj
+#'kata.meeting.core/meeting
+; Running tests for kata.meeting.core...
+; FAIL in kata.meeting.core-test/a-test (core_test.clj:8):
+; should split a list of users
+; expected:
+(NETO, ABEL)(MELO, FELIPE)
+; actual:
+((MELO, FELIPE)(NETO, ABEL))
+; 3 tests finished, problems found. 😭 errors: 0, failures: 1, ns: 1, vars: 1
+clj꞉kata.meeting.core꞉> 
+; Evaluating file: core_test.clj
+#'kata.meeting.core-test/a-test
+; Running tests for kata.meeting.core-test...
+; 3 tests finished, all passing 👍, ns: 1, vars: 1
+clj꞉kata.meeting.core-test꞉> 
+; Evaluating file: core_test.clj
+; Syntax error compiling at (src/kata/meeting/core_test.clj:10:5).
+; Unable to resolve symbol: i in this context
+; Evaluation of file core_test.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉kata.meeting.core-test꞉> 
+; Running tests for kata.meeting.core-test...
+; 3 tests finished, all passing 👍, ns: 1, vars: 1
+clj꞉kata.meeting.core-test꞉> 
+#function[clojure.core/=]
+clj꞉kata.meeting.core-test꞉> 
+; Evaluating file: core_test.clj
+#'kata.meeting.core-test/a-test
+; Running tests for kata.meeting.core-test...
+; ERROR in kata.meeting.core-test/a-test (line 12):
+; should split a list of users
+; error: clojure.lang.ArityException: Wrong number of args (0) passed to: kata.meeting.core/meeting (AFn.java)
+; expected:
+(= (BELL, MEGAN)(CORNWELL, AMBER)(DORNY, JAMES)(DORRIES, PAUL)(GATES, JOHN)(KERN, ANN)(KORN, ANNA)(META, ALEX)(RUSSEL, ELIZABETH)(STEVE, LEWIS)(WAHL, MICHAEL) John:Gates;Michael:Wahl;Megan:Bell;Paul:Dorries;James:Dorny;Lewis:Steve;Alex:Meta;Elizabeth:Russel;Anna:Korn;Ann:Kern;Amber:Cornwell (meeting))
+; 4 tests finished, problems found. 😭 errors: 1, failures: 0, ns: 1, vars: 1
+clj꞉kata.meeting.core-test꞉> 
+; Evaluating file: core_test.clj
+#'kata.meeting.core-test/a-test
+; Running tests for kata.meeting.core-test...
+; 4 tests finished, all passing 👍, ns: 1, vars: 1
+clj꞉kata.meeting.core-test꞉> 
+; Evaluating file: core.clj
+#'kata.meeting.core/meeting
+; Running tests for kata.meeting.core...
+; 4 tests finished, all passing 👍, ns: 1, vars: 1
+clj꞉kata.meeting.core꞉> 

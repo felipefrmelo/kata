@@ -12,10 +12,10 @@ export class Game {
     this.players = players;
   }
 
-  start() {
+  async start() {
     while (!this.state.over) {
       const currentPlayer = this.nextPlayer();
-      const action = currentPlayer.takeAction(this.state);
+      const action = await currentPlayer.takeAction(this.state);
       this.state = this.state.update(action, currentPlayer.point);
 
       if (this.state.done) {
